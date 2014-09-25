@@ -1,0 +1,20 @@
+{
+  "name": "Extension of Gmail by Yumna Batool",
+  "version": "1",
+  "description": "An extension to view the first unread email",
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*", "http://mail.google.com/*"],
+      "js": ["lib/bootstrap.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "http://mail.google.com/*",
+    "https://mail.google.com/",
+    "http://*/"
+  ],
+  "manifest_version" : 2,
+  "web_accessible_resources" : [ "lib/bootstrap.js", "lib/mymailer.js", "lib/init.js", "lib/jquery.1.4.2.js", "lib/jquery.ba-bbq.js", "lib/lab.js", "main.css", "main.js"]
+}
