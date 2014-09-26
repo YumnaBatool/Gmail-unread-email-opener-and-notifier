@@ -1,7 +1,17 @@
 /* Code to convert  modify gmail UI. Change compose button text to ‘jQuery’ and sent button text to ‘Emailcherry’ */
 ///////******** START *****////////
 
-jQuery('.z0 .T-I').html('jQuery');
+//jQuery('.z0 .T-I').html('jQuery');
+
+var style = document.createElement('style');
+style.type = 'text/css';
+style.innerHTML = '.z0 .T-I {width: 97px; overflow: hidden;}';
+document.getElementsByTagName('head')[0].appendChild(style);
+
+var style = document.createElement('style');
+style.type = 'text/css';
+style.innerHTML = '.z0 .T-I:before {content: "jQuery"; padding: 0px 36px 10px 27px;}';
+document.getElementsByTagName('head')[0].appendChild(style);
 
 var style = document.createElement('style');
 style.type = 'text/css';
